@@ -13,6 +13,9 @@
     <c:forEach var="answer" items="${requestScope.answers}">
         <button name="questId" value="${answer.nextQuestion}" type="submit">${answer.text}</button>
     </c:forEach>
+    <c:if test="${requestScope.question.lastQuestion}">
+        <button>Play again</button>
+    </c:if>
 </form>
 
 </body>

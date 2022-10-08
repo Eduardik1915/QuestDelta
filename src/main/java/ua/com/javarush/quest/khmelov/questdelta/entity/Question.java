@@ -8,9 +8,12 @@ public class Question {
     private final String text;
     private final List<Answer> answers = new ArrayList<>();
 
-    public Question(int id, String text) {
+    private boolean lastQuestion;
+
+    public Question(int id, String text, boolean lastQuestion) {
         this.id = id;
         this.text = text;
+        this.lastQuestion = lastQuestion;
     }
 
     public int getId() {
@@ -19,6 +22,10 @@ public class Question {
 
     public String getText() {
         return this.text;
+    }
+
+    public boolean isLastQuestion() {
+        return lastQuestion;
     }
 
     public List<Answer> getAnswers() {
